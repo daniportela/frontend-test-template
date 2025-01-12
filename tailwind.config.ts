@@ -13,6 +13,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      gridTemplateColumns: {
+        "catalog-grid": "repeat(auto-fit, minmax(min(100%, 250px), 1fr))",
+      },
+      gridAutoRows: {
+        "catalog-rows": "180px auto auto"
+      },
       colors: {
         "gray-light": "hsla(var(--gray-light))",
         "gray-dark": "hsla(var(--gray-dark))",

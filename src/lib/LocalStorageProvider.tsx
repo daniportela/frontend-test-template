@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react"
 
 // Types
-import { Game } from "./endpoint"
+import { Game } from "../utils/endpoint"
 
 type LocalStorageCtxValue = {
     gameCollection: Game[]
