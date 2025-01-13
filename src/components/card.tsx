@@ -42,7 +42,7 @@ export default function Card({ game }: { game: Game }) {
 
                 <div className="flex justify-between">
                     <span>{game.name}</span>
-                    <span>{game.price}</span>
+                    <span>$ {game.price}</span>
                 </div>
             </div>
 
