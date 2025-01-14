@@ -26,8 +26,10 @@ export default function Home({searchParams}: { searchParams: SearchParams }) {
   const [loading, setLoading] = useState<boolean>(false)
   const router = useRouter()
 
+  const baseUrl = process.env.NODE_ENV === "production" ? `${process.env.API_URL}/api/games` : "http://localhost:3000/api/games"
+
   useEffect(() => {
-    const url = new URL("http://localhost:3000/api/games")
+    const url = new URL(baseUrl)
 
     if (searchParams.genre) {
       url.searchParams.append("genre", searchParams.genre);
