@@ -26,7 +26,7 @@ export default function Home({searchParams}: { searchParams: SearchParams }) {
   const [loading, setLoading] = useState<boolean>(false)
   const router = useRouter()
 
-  const baseUrl = "frontend-test-template-sigma.vercel.app/api/games"
+  const baseUrl = "https://frontend-test-template-sigma.vercel.app/api/games"
 
   useEffect(() => {
     const url = new URL(baseUrl)
