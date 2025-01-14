@@ -3,10 +3,10 @@
 // Components
 import Card from "@/components/card"
 import OrderSummary from "@/components/order-summary"
+import Link from "next/link"
 
 // Hooks
 import { useLocalStorageCtx } from "@/lib/LocalStorageProvider"
-import Link from "next/link"
 
 export default function CartPage() {
     const { gameCollection } = useLocalStorageCtx()
@@ -17,10 +17,14 @@ export default function CartPage() {
                 <h1 className="text-3xl font-bold mt-10">Your Cart</h1>
                 <span className="block mt-2 mb-10">{gameCollection.length} items</span>
 
-                <section className="grid grid-cols-2 gap-[30px] text-gray-text">
+                <section className="grid sm:grid-cols-1 md:grid-cols-2 gap-[30px] text-gray-text">
                     <section>
                         {gameCollection.map(game => (
-                            <Card key={game.id} game={game} />
+                            <Card
+                                key={game.id}
+                                game={game}
+                                variant="horizontal"
+                            />
                         ))}
                     </section>
 

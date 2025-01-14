@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom'
 import { act } from "react";
-import LocalStorageProvider, { useLocalStorageCtx } from "./LocalStorageProvider";
+import LocalStorageProvider, { useLocalStorageCtx } from "../lib/LocalStorageProvider";
 
 // Helper component for testing
 const TestComponent = () => {

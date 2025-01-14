@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 
 // Components
 import Image from "next/image";
+import { ShoppingCart } from "lucide-react";
 
 // Disable SSR for LocalStorage provider, given that Local Storage only exists in the client
 const LocalStorageProvider = dynamic(() => import("@/lib/LocalStorageProvider"), { ssr: false });
@@ -25,9 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={archivo.className}>
-        <header className="w-full bg-gray-light min-h-[50px] px-24 flex items-center justify-between">
+        <header className="w-full bg-gray-light min-h-[50px] px-24 flex items-center justify-between fixed top-0">
           <Link href="/">GamerShop</Link>
-          <Link href="/cart">Cart</Link>
+          <Link href="/cart">
+            <ShoppingCart />
+          </Link>
         </header>
 
         <LocalStorageProvider>
